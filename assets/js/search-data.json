@@ -5,7 +5,9 @@
   
 
   
-      "page1": {
+
+  
+      "page2": {
           "title": "About Our Project",
           "content": "Our project is based off of the NBA and all 30 teams that are in the NBA. We plan on making a seperate page for each of the 30 teams that are in the NBA. .",
           "url": "https://thegerbil21.github.io/NBAD/about/",
@@ -25,17 +27,6 @@
   
 
   
-  
-
-  
-      ,"page7": {
-          "title": "API",
-          "content": "Our API Consists of : . User input to whatever team they want to pick | A random generator that will generate a random team out of all 30 Thinking about adding more data to the API | Data can consist of Championships, players, and more | Here is the code of our backend API Work: | . | .",
-          "url": "https://thegerbil21.github.io/NBAD/tags/",
-          "relUrl": "/tags/",
-          "date": ""
-      }
-      
   
 
   
