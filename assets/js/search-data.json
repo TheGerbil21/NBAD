@@ -1,5 +1,16 @@
 {
   
+    
+        "post0": {
+            "title": "API Notes / Information",
+            "content": "",
+            "url": "https://thegerbil21.github.io/NBAD/2022/11/02/api1.html",
+            "relUrl": "/2022/11/02/api1.html",
+            "date": " • Nov 2, 2022"
+        }
+        
+    
+  
 
   
   
@@ -7,7 +18,7 @@
   
 
   
-      "page2": {
+      ,"page2": {
           "title": "About Our Project",
           "content": "Our project is based off of the NBA and all 30 teams that are in the NBA. We plan on making a seperate page for each of the 30 teams that are in the NBA. .",
           "url": "https://thegerbil21.github.io/NBAD/about/",
