@@ -1,11 +1,7 @@
 ---
 layout: page
-title: About Me
+title: About Our Project
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
-
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+Our project is based off of the NBA and all 30 teams that are in the NBA.  We plan on making a seperate page for each of the 30 teams that are in the NBA.
