@@ -2,26 +2,47 @@
 layout: home
 search_exclude: true
 ---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Denver Nuggets</title>
+  </head>
+  <body>
+    <img src="https://user-images.githubusercontent.com/51098969/199866863-25816273-666e-48be-b7ef-4caa8554e269.png" alt="Trulli" width="500" height="500">
+    <h1 style="text-align: center; font-size: 50px">
+      NBA Stats Site
+      <span style="color: #ff5e5e !important; font-weight: bold">Statistics</span>
+    </h1>
+    <table class="teams" border="1">
+      <tr>
+        <th>Most Valuable Players</th>
+        <th>Championships Won</th>
+        <th>Win-Loss Record</th>
+      </tr>
+    </table>
+     <script type="text/javascript">
+      const teams = document.querySelector(".teams");
 
-<html>
-<body>
+      fetch("https://nba.nighthawkcodescrums.gq/api/teams/2")
+        .then((data) => data.json())
+        .then((data) => {
+          console.log(data);
+          data._embedded.teamWinStatsList.reverse().forEach((stat) => {
+            teams.innerHTML += `
+        <tr>
+          <td style="text-align: center; font-weight: bold;">${stat.name}</td>
+            <td>${stat.mvp}</td>
+            <td>${stat.champs}</td>
+            <td>${stat.winloss}</td>
+        </tr>`;
+          });
+        });
+    </script>
 
-<img src="https://user-images.githubusercontent.com/51098969/199866863-25816273-666e-48be-b7ef-4caa8554e269.png" alt="Trulli" width="500" height="500">
+  </body>
+</html>
 
-</body>
 
-<table>
-    <tr>
-      <th>Most Valuable Players:</th>
-      <th>Accomplishments:</th>
-    </tr>
-    <tr>
-      <td>Nikola Jokić</td>
-      <td>48-34 Record This Year</td>
-    </tr>
-    <tr>
-      <td>David Thompson</td>
-      <td>0 Championships Won</td>
-    </tr>
-  </table>
-  </html>
