@@ -3,25 +3,44 @@ layout: home
 search_exclude: true
 ---
 
-<html>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boston Celtics</title>
+  </head>
+  <body>
+    <img src="https://user-images.githubusercontent.com/51098969/199865331-0e0fe77f-3bb7-40ad-a5c1-ff0b24d10771.png" alt="Trulli" width="500" height="500">
+    <h1 style="text-align: center; font-size: 50px">
+      Boston Celtics
+      <span style="color: #ff5e5e !important; font-weight: bold">Statistics</span>
+    </h1>
+    <table class="teams" border="1">
+      <tr>
+        <th>Most Valuable Players</th>
+        <th>Championships Won</th>
+        <th>Win-Loss Record</th>
+      </tr>
+    </table>
+     <script type="text/javascript">
+      const teams = document.querySelector(".teams");
 
-<img src="https://user-images.githubusercontent.com/51098969/199865331-0e0fe77f-3bb7-40ad-a5c1-ff0b24d10771.png" alt="Trulli" width="500" height="500">
+      fetch("https://nba.nighthawkcodescrums.gq/api/teams/2")
+        .then((data) => data.json())
+        .then((data) => {
+          console.log(data);
+          data._embedded.teamWinStatsList.reverse().forEach((stat) => {
+            teams.innerHTML += `
+        <tr>
+          <td style="text-align: center; font-weight: bold;">${stat.name}</td>
+            <td>${stat.mvp}</td>
+            <td>${stat.champs}</td>
+            <td>${stat.winloss}</td>
+        </tr>`;
+          });
+        });
+    </script>
 
-</body>
-
-<table>
-    <tr>
-      <th>Most Valuable Players:</th>
-      <th>Accomplishments:</th>
-    </tr>
-    <tr>
-      <td>Bill Russell</td>
-      <td>51-31 Record This Year</td>
-    </tr>
-    <tr>
-      <td>Larry Bird</td>
-      <td>17 Championships Won</td>
-    </tr>
-  </table>
-  </html>
+  </body>
+</html>
