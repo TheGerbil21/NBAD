@@ -67,7 +67,6 @@
   
 
   
-  
 
   
   
@@ -76,7 +75,10 @@
   
 
   
-      ,"page24": {
+  
+
+  
+      ,"page25": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://thegerbil21.github.io/NBAD/robots.txt",
